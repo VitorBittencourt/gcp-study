@@ -1,3 +1,3 @@
-FROM openjdk:8-jdk-alpine
-COPY . app.jar
+FROM openjdk:12-jdk-alpine
+COPY build/libs/*.jar app.jar
 ENTRYPOINT ["java","-Dspring.profiles.active=default","-jar","app.jar"]
